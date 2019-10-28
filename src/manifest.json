@@ -1,0 +1,23 @@
+{
+  "name": "怪しい日本語",
+  "short_name": "怪しい日本語",
+  "description": "webページを怪レい日本語に直す（しなさい）",
+  "version": "114514",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": ["jquery-2.2.0.min.js", "content_script.js"]
+  }],
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "contextMenus", 
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "http://shenzhen.starfree.jp/api.php"
+  ]
+}
